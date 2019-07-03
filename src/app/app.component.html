@@ -1,26 +1,23 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div class="container-fluid d-flex align-items-center justify-content-center flex-column">
-  <h1>hello world!
-    <i>{{ title }} {{ sobrenome }}</i>
-  </h1>
-  <app-contador></app-contador>
-
-  <div *ngIf="sobrenome == 'Soares'">meu sobre nome é {{ title }} {{ sobrenome }}</div>
-  <div class="col-md-6">
-      <div class="card">
-        <div class="card-header">
-          <h3>Todo List</h3>
-        </div>
-        <div class="card-body">
-          <input class="form-control" #todo type="text" (keyup.enter)="addTodo(todo.value); todo.value = ''">
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item" *ngFor="let item of items;  let i = index;">
-            <app-todo-item [data]="item"></app-todo-item>
-            <a href="#" class="badge badge-danger" (click)="removeItem(this.i)">remove</a>
-          </li>
-        </ul>
-      </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Avanade Angular</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/todos">Todos</a>
+      </li>
+    </ul>
   </div>
+</nav>
+<div class="container">
+  <app-contador></app-contador>
+  <p>contador {{ contador }}</p>
+  <app-contador-botoes></app-contador-botoes>
+  <router-outlet></router-outlet>
 </div>
 

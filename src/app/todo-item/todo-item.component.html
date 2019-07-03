@@ -1,3 +1,6 @@
-<div>
-  <b>Task: </b>{{ data }}
-</div>
+<li>
+  <p>Task: {{ data.title }}</p>
+  <p>Descrição: {{ data.description }}</p>
+  <p>Finalizado? {{ data.finished ? 'Sim' : 'Não' }}</p>
+  <p>Data: {{ data.date }}</p>
+</li>

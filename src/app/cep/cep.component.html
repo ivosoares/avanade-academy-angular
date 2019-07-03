@@ -1,0 +1,10 @@
+<div class="form-row">
+  <input #cepNumber type="text" placeholder="digite seu cep" class="form-control col">
+  <button  (click)="getCep(cepNumber.value)" class="btn btn-success col">Buscar</button>
+</div>
+<ul>
+  <li><b>Logradouro:</b> {{ cep.logradouro }}</li>
+  <li><b>Bairro:</b> {{ cep.bairro }}</li>
+  <li><b>Localidade:</b> {{ cep.localidade }}</li>
+  <li><b>Estado:</b> {{ cep.uf }}</li>
+</ul>
