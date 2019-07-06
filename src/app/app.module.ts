@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CepComponent } from './cep/cep.component';
+import { AddTodoComponent } from './add-todo/add-todo.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -25,7 +26,8 @@ const routes: Routes = [
     ContadorBotoesComponent,
     ListaTodosComponent,
     HomeComponent,
-    CepComponent
+    CepComponent,
+    AddTodoComponent
   ],
   imports: [
     BrowserModule,
